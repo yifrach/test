@@ -7,7 +7,7 @@ script:
     - docker images yarinif/node
 
 before_deploy:
-    - docker login --username yifrach --password-stdin 205697410Yi
+    - docker login -u yarinif -p 205697410Yi
 
 deploy:
     provider: script
