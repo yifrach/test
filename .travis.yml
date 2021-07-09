@@ -2,6 +2,15 @@ sudo: required
 services:
     - docker
 
-    script:
-        - docker build -t mannydesigns/node .
-        - docker image mannydesigns/node
+script:
+    - docker build -t yarinif/node .
+    - docker image yarinif/node
+
+before_deploy:
+    - docker login -u yifrach -p 205697410Yi
+
+deploy:
+    provider: script
+    script: docker push yarinif/node
+    on:
+        branch: master
