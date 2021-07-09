@@ -4,7 +4,7 @@ services:
 
 script:
     - docker build -t yarinif/node .
-    - docker image yarinif/node
+    - docker images yarinif/node
 
 before_deploy:
     - docker login -u yifrach -p 205697410Yi
